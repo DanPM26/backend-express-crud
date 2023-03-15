@@ -1,5 +1,6 @@
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
+require('dotenv').config()
 const app = express()
 
 const PORT = 5000
@@ -7,6 +8,7 @@ app.use(cors())
 app.use(express.json())
 const {librosRouter} = require('./routes')
 
+console.log(process.env.VERCEL_FORCE_NO_BUILD_CACHE)
 app.use('/api', librosRouter)
 
 app.get('/', (req,res)=>{
