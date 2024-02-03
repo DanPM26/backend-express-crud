@@ -13,7 +13,7 @@ const swaggerOptions = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'Node API for Order Management',
+            title: 'Libros',
             version: '1.0.0',
         },
         servers: [
