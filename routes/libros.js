@@ -26,8 +26,7 @@ const router = express.Router();
  *          type: number
  *          description: The order's total amount
  *      required:
- *        - id
- *        - nombre
+ *        - autor
  *        - editorial
  *        - año
  *      example:
@@ -96,6 +95,7 @@ const router = express.Router();
         
      } else {
        res.send("Error en almacenar la petición")
+       console.log(autor, editorial, año)
      }
  })
 

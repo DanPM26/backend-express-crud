@@ -31,8 +31,6 @@ app.use(cors())
 app.use(express.json())
 
 
-console.log(process.env.VERCEL_FORCE_NO_BUILD_CACHE)
-
 app.use('/api', librosRouter)
 app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 
